@@ -21,9 +21,7 @@
       tapping-term-ms = <150>;
       quick-tap-ms = <0>;
       flavor = "tap-preferred";
-      bindings =
-        <&kp>,
-        <&kp>;
+      bindings = <&kp>, <&kp>;
     };
   };
 
@@ -86,37 +84,46 @@
 
     base {
       bindings = <
-&kp ESCAPE       &kp Q       &kp W        &kp E         &kp R      &kp T      &kp Y         &kp U        &kp I       &kp O          &kp P  &kp BSLH
-   &kp TAB  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F      &kp G      &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp APOS
- &kp LCTRL       &kp Z       &kp X        &kp C         &kp V      &kp B      &kp N         &kp M    &kp COMMA     &kp DOT       &kp FSLH   &kp ESC
-                                       &kp LGUI         &mo 1  &kp SPACE    &kp RET         &mo 2     &kp RALT
+&kp GRAVE     &kp Q       &kp W       &kp E        &kp R                 &kp T          &kp Y         &kp U         &kp I        &kp O       &kp P          &kp BSLH
+&kp LCTRL     &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F          &kp G          &kp H         &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp APOS
+&kp LEFT_ALT  &kp Z       &kp X       &kp C        &kp V                 &kp B          &kp N         &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp BACKSLASH
+                                      &lt 2 TAB    &mt LEFT_SHIFT SPACE  &lt 1 ENTER    &lt 3 ESCAPE  &mo 2         &kp DEL
       >;
     };
 
     raise {
       bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans   &mo 3  &trans
+&kp UNDERSCORE  &kp N1           &kp N2        &kp N3        &kp N4        &kp N5         &kp N6        &kp N7         &kp N8        &kp N9                &kp N0                 &kp F11
+&kp PLUS        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS
+&kp EQUAL       &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp N7         &kp N8        &kp N9                &kp N0                 &kp NON_US_BACKSLASH
+                                               &trans        &trans        &trans         &trans        &mo 4          &trans
       >;
     };
 
     lower {
       bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR     &trans
-&trans    &trans  &trans    &trans    &trans     &trans    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&trans    &trans  &trans    &trans    &trans     &trans    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                            &trans     &mo 3     &trans       &trans     &trans           &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &trans
+&trans  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                          &trans    &mo 4     &trans       &trans     &trans     &trans
+      >;
+    };
+
+    brackets {
+      bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
       >;
     };
 
     both {
       bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 3  &trans  &trans  &trans  &trans    &rgb_ug RGB_COLOR_HSB(0,60,50)
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 3  &trans  &trans  &trans  &trans  &rgb_ug RGB_COLOR_HSB(0,60,50)
 &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 1    &bt BT_SEL 4  &trans  &trans  &trans  &trans  &rgb_ug RGB_COLOR_HSB(120,60,50)
-&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 2      &bt BT_CLR  &trans  &trans  &trans  &trans  &rgb_ug RGB_COLOR_HSB(240,60,50)
-                        &trans  &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 2    &bt BT_CLR    &trans  &trans  &trans  &trans  &rgb_ug RGB_COLOR_HSB(240,60,50)
+                        &trans  &trans  &trans          &trans        &trans  &trans
       >;
     };
   };
