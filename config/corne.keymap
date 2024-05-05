@@ -102,10 +102,10 @@
 
     lower {
       bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp CARET  &kp HOME        &kp PRINTSCREEN  &kp PAGE_UP      &kp LEFT_BRACE        &kp RIGHT_BRACE
-&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp LEFT_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans  &trans  &trans  &trans  &trans  &trans    &kp UNDER  &kp END         &kp DOWN_ARROW   &kp PAGE_DOWN    &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-                        &trans  &trans  &trans    &trans     &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp CARET  &kp HOME         &kp PRINTSCREEN  &kp PAGE_UP      &kp LEFT_BRACE        &kp RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp LEFT_ARROW   &kp UP_ARROW     &kp RIGHT_ARROW  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans  &trans  &trans  &trans  &trans  &trans    &kp UNDER  &kp END          &kp DOWN_ARROW   &kp PAGE_DOWN    &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+                        &trans  &trans  &trans    &trans     &kp RIGHT_SHIFT  &trans
       >;
     };
 
